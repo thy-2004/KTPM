@@ -1,0 +1,2 @@
+C:/Dong_A/Nam III/LapTrinhDiDong/shopping_app/android/app/.cxx/Debug/5f4r32r1/x86_64/CMakeFiles/edit_cache.dir
+C:/Dong_A/Nam III/LapTrinhDiDong/shopping_app/android/app/.cxx/Debug/5f4r32r1/x86_64/CMakeFiles/rebuild_cache.dir
