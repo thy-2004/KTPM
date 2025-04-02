@@ -21,6 +21,20 @@ class DatabaseMethods {
       return null;
     }
   }
+  Future<List<Map<String, dynamic>>> getAllProducts() async {
+    QuerySnapshot snapshot = await FirebaseFirestore.instance.collection("Products").get();
+
+    return snapshot.docs.map((doc) {
+      var data = doc.data() as Map<String, dynamic>;
+      return {
+        "name": data["name"],
+        "image": data["image"],
+        "price": (data["price"] is String) ? double.tryParse(data["price"]) ?? 0.0 : data["price"]
+      };
+    }).toList();
+  }
+
+
 
   // Thêm tất cả sản phẩm vào collection "Products"
   Future addAllProducts(Map<String, dynamic> userInfoMap) async {
